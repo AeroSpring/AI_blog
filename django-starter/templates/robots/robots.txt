@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /.git/
+Disallow: /venv/
+Allow: /
+Sitemap: https://ai-to-business.ru/sitemap.xml

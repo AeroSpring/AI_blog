@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="yandex-verification" content="0b5101ffa8124837" />
+    <meta name="google-site-verification" content="CYoRn2KoqzcvBymn4hLpjI_aLH91lQZbNpuX1kUCLzc" />
     <title>{{ PROJECT_TITLE }}</title>
-    <!-- <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}"> -->
-    <link rel="icon" type="image/x-icon" href="{% static 'AI.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <style>
         /* Визуальный признак нажатой кнопки в хэдере */
@@ -484,11 +486,11 @@
             @apply mb-4
         }
         .button, button, [type='submit'], [type='button'] {
-            @apply bg-indigo-600 text-white font-bold px-6 py-4 inline-block 
+            @apply bg-gray-800 text-white font-bold px-6 py-4 inline-block 
             rounded-lg shadow-lg transition-all cursor-pointer
         }
         .button:hover, button:hover, [type='submit']:hover, [type='button']:hover {
-            @apply bg-indigo-700
+            @apply bg-gray-400
         }
         .button:active, button:active, [type='submit']:active, [type='button']:active {
             @apply scale-95
@@ -562,7 +564,10 @@
     </style>
 
 </head>
-<body class="{% block class %}{% endblock %}" hx-headers='{"x-csrftoken": "{{ csrf_token }}"}'>
+<body class="{% block class %}{% endblock %}"
+    hx-headers='{"x-csrftoken": "{{ csrf_token }}"}'
+    x-data="{ mobileMenuOpen: false }"
+>
 	
     {% include 'includes/messages.html' %}
 
@@ -572,7 +577,6 @@
         {% block content %}
         {% endblock %}
     {% endblock %}
-
 
 </body>
 </html>
